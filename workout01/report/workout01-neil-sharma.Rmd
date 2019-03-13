@@ -1,0 +1,39 @@
+---
+title: "Workout 01"
+output: github_document
+---
+
+```{r}
+library(dplyr)
+combined <- read.csv("../data/shots-data.csv", stringsAsFactors = FALSE)
+combined$total_shots <- 1
+combined$made_2 <- 0
+combined$attempted_2 <- 0
+combined$attempted_2[combined$shot_type == '2PT Field Goal'] <- 1
+combined$made_2[combined$shot_type == '2PT Field Goal' & combined$shot_made_flag == 'shot_yes'] <- 1
+combined$attempted_3 <- 0
+combined$attempted_3[combined$shot_type == '3PT Field Goal'] <- 1
+combined$made_3 <- 0
+combined$made_3[combined$shot_type == '3PT Field Goal' & combined$shot_made_flag == 'shot_yes'] <- 1
+combined$total_made <- combined$made_3 + combined$made_2
+
+two_point_shooting <- arrange(summarise(
+  group_by(combined, name),
+  total= sum(attempted_2),
+  made = sum(made_2), 
+  perc_made = 100 * made/total), desc(perc_made))
+
+three_point_shooting <- arrange(summarise(
+  group_by(combined, name),
+  total= sum(attempted_3),
+  made = sum(made_3), 
+  perc_made = 100 * made/total), desc(perc_made))
+
+
+total_shooting <- arrange(summarise(
+  group_by(combined, name),
+  total= sum(total_shots),
+  made = sum(total_made), 
+  perc_made = 100 * made/total), desc(perc_made))
+```
+
