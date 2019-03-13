@@ -2,11 +2,11 @@
 
 Private Repository for HW assignments of Stat 133 (Spring 2019)
 
-- Name: Your name (first last)
-- Github username: usrname
-- Email: address [at] email.com
-- Lab section: 101
-- GSI: Leia Organa
+- Name: Neil Sharma
+- Github username: nsharma1998
+- Email: nsharma1998@berkeley.edu
+- Lab section: 102
+- GSI: Dodo Qian
 
 -----
 
