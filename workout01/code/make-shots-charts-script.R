@@ -1,3 +1,9 @@
+##Title: Data Visualization
+##Description: Visualizing the shots data per player
+##Inputs: Aggregated shot data
+##Output: png and pdf shot images for each player
+
+
 library(jpeg)
 library(grid)
 library(ggplot2)

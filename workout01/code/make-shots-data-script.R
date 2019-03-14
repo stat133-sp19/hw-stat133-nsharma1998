@@ -1,3 +1,8 @@
+##Title: Data Preparation
+##Description: Processing the data and saving as new csv
+##Inputs: Shot Data for Each Player
+##Output: csv document for aggregated shot data
+
 curry <- read.csv("../data/stephen-curry.csv", stringsAsFactors = FALSE)
 green <- read.csv("../data/draymond-green.csv", stringsAsFactors = FALSE)
 klay <- read.csv("../data/klay-thompson.csv", stringsAsFactors = FALSE)
