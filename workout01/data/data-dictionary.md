@@ -1,4 +1,4 @@
-##Data Dictionary 
+Data Dictionary 
 
 - team_name - Name of the team 
 - game_date - Date of the Game
