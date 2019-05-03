@@ -23,21 +23,21 @@ test_that("bin_probability has correct output", {
 # bin_distribution
 
 test_that("bin_distribution has correct output", {
-  trials = 5
-  prob = 0.5
-  expect_equal(bin_distribution(trials, prob)$prob, c(0.03125, 0.15625, 0.31250, 0.31250, 0.15625, 0.03125))
-  expect_equal(bin_distribution(trials, prob)$success, 0:5)
-  expect_equal(typeof(bin_distribution(trials, prob)), "list")
-  expect_length(bin_distribution(trials, prob), 2)
+  n = 5
+  p = 0.5
+  expect_equal(bin_distribution(n, p)$prob, c(0.03125, 0.15625, 0.31250, 0.31250, 0.15625, 0.03125))
+  expect_equal(bin_distribution(n, p)$success, 0:5)
+  expect_equal(typeof(bin_distribution(n, p)), "list")
+  expect_length(bin_distribution(n, p), 2)
 })
 
 # bin_cumulative
 
 test_that("bin_cumulative has correct output", {
-  trials = 5
-  prob = 0.5
-  expect_equal(bin_cumulative(trials, prob)$cumulative, c(0.03125, 0.18750, 0.50000, 0.81250, 0.96875, 1.00000))
-  expect_equal(bin_cumulative(trials, prob)$success, 0:5)
-  expect_equal(typeof(bin_cumulative(trials, prob)), "list")
-  expect_length(bin_cumulative(trials, prob), 3)
+  n = 5
+  p = 0.5
+  expect_equal(bin_cumulative(n, p)$cumulative, c(0.03125, 0.18750, 0.50000, 0.81250, 0.96875, 1.00000))
+  expect_equal(bin_cumulative(n, p)$success, 0:5)
+  expect_equal(typeof(bin_cumulative(n, p)), "list")
+  expect_length(bin_cumulative(n, p), 3)
 })

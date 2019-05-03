@@ -1,9 +1,21 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 Overview
 --------
 
 The package `"binomial"` is an [R](http://www.r-project.org/) package that provides functions to view and visualize the binomial distribution as well as view characteristics of the distribution.
+
+This package includes the following functions:
+
+-   bin\_choose() finds the number of ways in which k successes can occur in n trials.
+-   bin\_probability() finds the probability of getting k successes in n trials for a binomial distribution.
+-   bin\_distribution() finds the entire probability distribution of a binomial random variable. The distribution can also be plotted using plot.bindis().
+-   bin\_cumulative() finds the entire cumulative probability distribution of a binomial random variable. The distribution can also be plotted using plot.bincum().
+-   bin\_variable() returns a list specifying the number of trials and the probability of success for a binomial random variable.summary.binvar() allows you to view the summary statistics of the random variable.
+-   bin\_mean() finds the mean of a binomial random variable.
+-   bin\_variance() finds the variance of a binomial random variable.
+-   bin\_mode() finds the mode of a binomial random variable.
+-   bin\_skewness() finds the skewness of a binomial random variable.
+-   bin\_kurtosis() finds the kurtosis of a binomial random variable.
 
 Motivation
 ----------
@@ -44,15 +56,7 @@ bin_distribution(trials = 5, prob = 0.5)
 #> 4       3 0.31250
 #> 5       4 0.15625
 #> 6       5 0.03125
- 
-# plotting binomial probability distribution
-dis1 <- bin_distribution(trials = 5, prob = 0.5) 
-plot(dis1)
-```
 
-![](README-unnamed-chunk-2-1.png)
-
-``` r
 
 #binomial cumulative distribution
 bin_cumulative(trials = 5, prob = 0.5)
@@ -64,14 +68,6 @@ bin_cumulative(trials = 5, prob = 0.5)
 #> 5       4 0.15625    0.96875
 #> 6       5 0.03125    1.00000
  
-# plotting binomial cumulative distribution
-dis2 <- bin_cumulative(trials = 5, prob = 0.5)
-plot(dis2)
-```
-
-![](README-unnamed-chunk-2-2.png)
-
-``` r
 
 #Binomial with n=10, p=0.3
 bin_mean(10, 0.3)

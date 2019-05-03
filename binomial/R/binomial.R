@@ -162,7 +162,7 @@ bin_probability = function(success, trials, prob){
 #' @param trials integer value for number of trials
 #' @param prob numeric value for the probability of success
 #' @export
-#' @return vector of binomial probabilities
+#' @return dataframe with two classes: bindis and data.frame
 #' #' @examples
 #'
 #' bin_distribution(5, 0.5)
@@ -189,7 +189,7 @@ plot.bindis <- function(object) {
 #' @param trials integer value for number of trials
 #' @param prob numeric value for the probability of success
 #' @export
-#' @return vector of cumulative binomial probabilities
+#' @return dataframe with two classes: bincum and data.frame
 #' #' @examples
 #'
 #' bin_cumulative(5, 0.5)
@@ -216,7 +216,7 @@ plot.bincum = function(object){
 #' @param trials integer value for number of trials
 #' @param prob numeric value for the probability of success
 #' @export
-#' @return binomial random variable object
+#' @return named list for class binvar
 #' #' @examples
 #'
 #' bin_variable(5, 0.5)

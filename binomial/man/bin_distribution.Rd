@@ -12,7 +12,7 @@ bin_distribution(trials, prob)
 \item{prob}{numeric value for the probability of success}
 }
 \value{
-vector of binomial probabilities
+dataframe with two classes: bindis and data.frame
 #' @examples
 
 bin_distribution(5, 0.5)

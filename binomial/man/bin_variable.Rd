@@ -12,7 +12,7 @@ bin_variable(trials, prob)
 \item{prob}{numeric value for the probability of success}
 }
 \value{
-binomial random variable object
+named list for class binvar
 #' @examples
 
 bin_variable(5, 0.5)

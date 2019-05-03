@@ -12,7 +12,7 @@ bin_cumulative(trials, prob)
 \item{prob}{numeric value for the probability of success}
 }
 \value{
-vector of cumulative binomial probabilities
+dataframe with two classes: bincum and data.frame
 #' @examples
 
 bin_cumulative(5, 0.5)

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "context(\"binomial summary\")\n#aux_mean\n\ntest_that(\"aux_mean has correct output\", {\n  n = 10\n  p = 0.3\n  expect_equal(aux_mean(n, p), 3)\n  expect_length(aux_mean(n, p), 1)\n  expect_type(aux_mean(n, p), \"double\")\n})\n\n#aux_variance\n\ntest_that(\"aux_variance has correct output\", {\n  n = 10\n  p = 0.3\n  expect_equal(aux_variance(n, p), 2.1)\n  expect_length(aux_variance(n, p), 1)\n  expect_type(aux_variance(n, p), \"double\")\n})\n\n#aux_mode\n\ntest_that(\"aux_mode has correct output\", {\n  n = 10\n  p = 0.3\n  expect_equal(aux_mode(n, p), 3)\n  expect_length(aux_mode(n, p), 1)\n  expect_type(aux_mode(n, p), \"integer\")\n})\n\n#aux_skewness\n\ntest_that(\"aux_skewness has correct output\", {\n  n = 10\n  p = 0.3\n  expect_equal(aux_skewness(n, p), 0.2760262, tolerance = 0.0001)\n  expect_length(aux_skewness(n, p), 1)\n  expect_type(aux_skewness(n, p), \"double\")\n})\n\n\n#aux_kurtosis\n\ntest_that(\"aux_kurtosis has correct output\", {\n  n = 10\n  p = 0.3\n  expect_equal(aux_kurtosis(n, p), -0.1238095, tolerance = 0.0001)\n  expect_length(aux_kurtosis(n, p), 1)\n  expect_type(aux_kurtosis(n, p), \"double\")\n})\n",
+    "created" : 1556907672750.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2918456540",
+    "id" : "EB95F5DC",
+    "lastKnownWriteTime" : 1556907705,
+    "last_content_update" : 1556907705369,
+    "path" : "~/Documents/stat133/binomial/tests/testthat/test-summary.R",
+    "project_path" : "tests/testthat/test-summary.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
