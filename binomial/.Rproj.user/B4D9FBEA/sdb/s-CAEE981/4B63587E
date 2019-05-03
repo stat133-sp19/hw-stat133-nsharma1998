@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "\n# =====================================================\n# Devtools workflow\n#library(devtools)\n# =====================================================\n\ndevtools::document()          # generate documentation\ndevtools::check_man()         # check documentation\ndevtools::test()              # run tests\ndevtools::build_vignettes()   # build vignettes\ndevtools::build()             # build bundle\ndevtools::install()           # install package\n",
+    "created" : 1556907078466.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3811328090",
+    "id" : "4B63587E",
+    "lastKnownWriteTime" : 1556871841,
+    "last_content_update" : 1556871841,
+    "path" : "~/Documents/stat133/binomial/devtools-flow.R",
+    "project_path" : "devtools-flow.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

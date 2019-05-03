@@ -1,0 +1,118 @@
+---
+title: "Getting started with Binomial"
+author: "Neil Sharma"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to cointoss}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set( collapse = TRUE, comment = "#>")
+library(binomial)
+```
+
+## Binomial Experiment
+
+The binomial package is an implementation of the binomial distribution, which allows the user to view and visualize the binomial distribution, as well as the features of the distribution. 
+
+## Function - bin_choose()
+
+The first step in the implementation is the function bin_choose, which calculates the choose factor, the number of ways to get k successes in n trials.
+
+Below are examples of how to use the function:
+```{r}
+bin_choose(5, 2)
+bin_choose(5, 1:3)
+```
+
+
+##Function - bin_probability()
+
+The next step in the implementation is the function bin_probability, which calculates the probability of getting k successes in n trials given a specific probability of success.
+
+Below are examples of how to use the function:
+
+```{r}
+#Probability of 2 successes in 5 trials with p=0.5
+bin_probability(2, 5, 0.5)
+
+#Probability of 1-3 successes in 5 trials with p=0.2
+bin_probability(1:3, 5, 0.2)
+```
+
+
+## Function- bin_distribution()
+
+The next step is the function bin_distribution, which calculates the entire probability distribution for the binomial given a number of trials and a specific probability of success and returns a data frame with the appropiate information. The data frame has two classes: 'bindis' and 'data.frame'.
+
+Below are examples of how to use the function:
+
+```{r}
+#Probability distribution of binomial with 5 trials and p=0.5
+bin_distribution(5, 0.5)
+
+#Probability distribution of binomial with 2 trials and p=0.2
+bin_distribution(2, 0.2)
+```
+
+
+This function can also be used in conjunction with plot.bindis, which plots the distribution of the resulting bindis object.
+
+```{r}
+# plotting binomial probability distribution with n=5, p=0.5
+dis1 <- bin_distribution(trials = 5, prob = 0.5)
+plot(dis1)
+```
+
+
+## Function- bin_cumulative()
+
+The next step is the function bin_cumulative, which calculates the entire cumulative distribution for the binomial given a number of trials and a specific probability of success and returns a data frame with the appropiate information. The data frame has two classes: 'bincum' and 'data.frame'.
+
+```{r}
+# binomial cumulative distribution with n=5, p=0.5
+bin_cumulative(trials = 5, prob = 0.5)
+```
+
+This function can also be used in conjunction with plot.bindis, which plots the resulting bindis object.
+
+```{r}
+# plotting binomial cumulative distribution with n=5, p=0.5
+dis2 <- bin_cumulative(trials = 5, prob = 0.5)
+plot(dis2)
+```
+
+##Function bin_variable()
+
+The function `bin_variable()` returns a list (of class "binvar") with the attributes of the binomial distribution. It takes in the number of trials and the probability of success as arguments. 
+
+Below is an example of how to use bin_variable()
+
+```{r}
+bin1 <- bin_variable(trials = 10, p = 0.3)
+bin1
+```
+
+This function can be used in conjunction with summary.binvar(), which takes in a binvar object and returns a summary of the random variable. 
+
+```{r}
+summary(bin1)
+```
+
+## Functions of measures
+
+Finally, there are five functions which allow you to view features of the binomial distribution. These features are the mean, mode, variance, skewness, and kurtosis. These functions all take in number of trials and probability as an argument. 
+
+Below are examples of how to use the functions.
+```{r}
+#N=10, p=0.3
+bin_mean(10, 0.3)
+bin_variance(10, 0.3)
+bin_mode(10, 0.3)
+bin_skewness(10, 0.3)
+bin_kurtosis(10, 0.3)
+```
+

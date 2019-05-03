@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\noutput:\n  github_document:\n    html_preview: false\n---\n\n```{r, echo = FALSE}\nknitr::opts_chunk$set(\n  collapse = TRUE,\n  comment = \"#>\",\n  fig.path = \"README-\"\n)\n```\n\n## Overview\n\nThe package `\"binomial\"` is an [R](http://www.r-project.org/) package that provides functions to view and visualize the binomial distribution as well as view characteristics of the distribution.\n\n## Motivation \n\nThis package has been developed as part of a project for Statistics 133.\n\n## Installation\n\nInstall the development version from GitHub via the package `\"devtools\"`:\n\n``` r\n# development version from GitHub:\n#install.packages(\"devtools\") \n# install \"binomial\" (without vignettes)\ndevtools::install_github(\"stat133-sp19/hw-stat133-nsharma1998binomial\")\n# install \"binomial\" (with vignettes)\ndevtools::install_github(\"stat133-sp19/hw-stat133-nsharma1998/binomial\", build_vignettes = TRUE)\n```\n\n## Usage\n\n```{r}\nlibrary(binomial)\n\n# 55 heads in 100 tosses of a loaded coin with 45% chance of heads\nbin_probability(success = 55, trials = 100, prob = 0.45)\n \n\n# binomial probability distribution\nbin_distribution(trials = 5, prob = 0.5)\n \n# plotting binomial probability distribution\ndis1 <- bin_distribution(trials = 5, prob = 0.5) \nplot(dis1)\n\n#binomial cumulative distribution\nbin_cumulative(trials = 5, prob = 0.5)\n \n# plotting binomial cumulative distribution\ndis2 <- bin_cumulative(trials = 5, prob = 0.5)\nplot(dis2)\n\n#Binomial with n=10, p=0.3\nbin_mean(10, 0.3)\nbin_variance(10, 0.3)\nbin_mode(10, 0.3)\nbin_skewness(10, 0.3)\nbin_kurtosis(10, 0.3)\n",
+    "created" : 1556873037123.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2639789168",
+    "id" : "4CDD6617",
+    "lastKnownWriteTime" : 1556873611,
+    "last_content_update" : 1556873611811,
+    "path" : "~/Documents/stat133/binomial/README.Rmd",
+    "project_path" : "README.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

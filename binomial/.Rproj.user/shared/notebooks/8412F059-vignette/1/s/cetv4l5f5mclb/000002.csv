@@ -1,0 +1,4 @@
+"0","knitr::opts_chunk$set( collapse = TRUE, comment = ""#>"")"
+"0","library(binomial)"
+"2","Error in library(binomial) : there is no package called ‘binomial’
+"
